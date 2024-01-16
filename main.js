@@ -120,12 +120,14 @@ console.log(checkNumber(1));
 //Write a JavaScript function to get the current date 
 function getCurrentDate() {
 
-  var day = new Date().getDate();
-  var month = new Date().gerFullMonth() + 1;
-  var year = new Date().getFullYear();
+  var date = new Date();
+
+  var day = date.getDay();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
 
   var newDate =  day + "/ " + month + "/ " + year;
-  return newDate;
+  document.getElementById("date").innerHTML = newDate;
+
 }
-var newDate  =  getCurrentDate();
-console.log(newDate);
+getCurrentDate()
